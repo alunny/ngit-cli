@@ -4,14 +4,14 @@ var createBlob = require('ngit-plumbing/git/createBlob'),
     zlib = require('zlib');
 
 module.exports = function hashObject(args) {
-    console.log(args);
-
     if (args.indexOf('--stdin') >= 0) {
         process.stdin.resume();
         process.stdin.setEncoding('utf8');
 
         collect(process.stdin, function (err, data) {
             var sha = createBlob(data), dir;
+
+            console.log(sha);
 
             if (args.indexOf('-w') >= 0) {
                 dir = '.git/objects/' + sha.slice(0,2);
