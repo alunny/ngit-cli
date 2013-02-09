@@ -7,8 +7,8 @@
     "test": "nodeunit test"
   },
   "bin": {
-    { "ngit": "./cli.js" }
-  }
+    "ngit": "./cli.js"
+  },
   "repository": "",
   "author": "alunny",
   "license": "BSD",
